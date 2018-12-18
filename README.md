@@ -1,2 +1,2 @@
 # stoicPlan
-A sample project planner app with real-time notifications, based on react, redux and firebase
+A sample project planner app with real-time notifications. A project based on react, redux and firebase
