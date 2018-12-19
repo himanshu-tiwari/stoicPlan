@@ -6,7 +6,7 @@ const SignedLinks = (props) => {
         <ul className="right">
             <li><NavLink to='/'>New Project</NavLink></li>
             <li><NavLink to='/'>Log Out</NavLink></li>
-            <li><NavLink to='/' className='btn btn-floating white' style={{color: '#000'}}>HT</NavLink></li>
+            <li><NavLink to='/' className='btn btn-floating white black-text'>HT</NavLink></li>
         </ul>
     );
 };
