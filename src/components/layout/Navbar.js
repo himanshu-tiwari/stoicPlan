@@ -5,20 +5,23 @@ import SignedOutLinks from './SignedOutLinks';
 import { connect } from 'react-redux';
 
 const Navbar = (props) => {
+    const { auth } = props;
+    const links = auth.uid && auth.uid.length > 0 ? <SignedInLinks /> : <SignedOutLinks />;
+
     return(
         <nav className="nav-wrapper black">
             <div className="container">
                 <Link to='/' className='brand-logo'>StoicPlan</Link>
-                <SignedInLinks />
-                <SignedOutLinks />
+                { links }
             </div>
         </nav>
     );
 };
 
 const maoStateToProps = (state) => {
-    console.log(state);
-    return {};
+    return {
+        auth : state.firebase.auth
+    };
 };
 
 export default connect(maoStateToProps)(Navbar);
