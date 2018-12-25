@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-./functions/node_modules
+/functions/node_modules
 
 # testing
 /coverage
@@ -24,4 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #config
-./src/config
+/src/config
