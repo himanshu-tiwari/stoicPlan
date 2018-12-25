@@ -19,7 +19,7 @@ const createNotification = (notification) => {
 exports.projectCreated = functions.firestore.document('projects/{projectId}').onCreate(doc => {
     const project = doc.data();
     const notification = {
-        content : 'Added a new project',
+        content : 'Added a new project!',
         user : project.authorFirstName + ' ' + project.authorLastName,
         time : admin.firestore.FieldValue.serverTimestamp()
     };
