@@ -4,11 +4,15 @@ import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/authActions';
 
 const SignedLinks = (props) => {
+    const { firstName, lastName } = props.profile;
+    let initials = (firstName ? firstName[0]: '') + (lastName ? lastName[0]: '');
+    initials = initials.length ? initials : 'SP';
+
     return(
         <ul className="right">
             <li><NavLink to='/create'>New Project</NavLink></li>
             <li><a href="#" onClick={props.signOut}>Log Out</a></li>
-            <li><NavLink to='/' className='btn btn-floating white black-text'>HT</NavLink></li>
+            <li><NavLink to='/' className='btn btn-floating white black-text'>{ initials }</NavLink></li>
         </ul>
     );
 };
