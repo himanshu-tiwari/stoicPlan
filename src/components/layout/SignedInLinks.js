@@ -9,7 +9,7 @@ const SignedLinks = (props) => {
     initials = initials.length ? initials : 'SP';
 
     return(
-        <ul className="right">
+        <ul>
             <li><NavLink to='/create'>New Project</NavLink></li>
             <li><a href="#" onClick={props.signOut}>Log Out</a></li>
             <li><NavLink to='/' className='btn btn-floating white black-text'>{ initials }</NavLink></li>
